@@ -10,4 +10,6 @@ CRySTALL-sha1.js is the SHA-1 implementation. This is preferred for production n
 
 Please take note - neither of these implement rate limiting on their own, because I found it can be disruptive for the end user expecting a certain degree of feedback in the front-end. Rate limiting guidelines for the API can be found here: https://haveibeenpwned.com/API/v2#RateLimiting. Rate limiting IS implemented in my demo code, which you are free to use directly or as a template/guideline, if you'd like.
 
+CRySTALL-demo.js is the demo implementation, used in demo.html. It uses SHA-1, a rate limiting system, and very responsive output to the end user who's trying to pick a password.
+
 Full disclosure: the SHA1 hashing function was not written by me, but no license indicating usage restrictions was present when I retrieved it. Original source is available here: http://sha1.nichabi.com/javascript-function.php. Credit goes to the author of the nichabi.com website for that functionality. Credit also goes to Troy Hunt and the API he has made available for his already-amazing project, "Have I Been Pwned". I highly recommend giving it a look if you haven't before, as it absolutely exemplifies the right idea and right implementation of responsible third-party breach disclosure: https://haveibeenpwned.com/. Thank you for HIBP, Troy!
