@@ -1,16 +1,16 @@
 function checkPass() {
-	passGiven = document.getElementById("password").value;
-	hashedPass = sha1(oldPassGiven);
+    passGiven = document.getElementById("password").value;
+    hashedPass = sha1(oldPassGiven);
     urlString = "https://haveibeenpwned.com/api/v2/pwnedpassword/" + hashedPass;
     xmlHttp.open("GET",urlString,true);
     xmlHttp.send();
-	xmlHttp.onloadend = function() {
+    xmlHttp.onloadend = function() {
         if (xmlHttp.status == "404") {
-			// The supplied password was not found in the HIBP Pwned Passwords list. This is ideal.
+            // The supplied password was not found in the HIBP Pwned Passwords list. This is ideal.
         } else if (xmlHttp.status == "200") {
-			// The supplies password was found in the HIBP Pwned Passwords list. The user should be prompted to choose a different password.
+            // The supplies password was found in the HIBP Pwned Passwords list. The user should be prompted to choose a different password.
         } else {
-			// There was an error with your request. 429 is thrown for exceeding rate-limiting, 403 is thrown for invalid requests.
+            // There was an error with your request. 429 is thrown for exceeding rate-limiting, 403 is thrown for invalid requests.
         }
     }
 }
