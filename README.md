@@ -1,6 +1,6 @@
 # CRySTALL
 CRedential STuffing ALLeviator
-Made for Troy Hunt's HIBP API contest.
+Made for Troy Hunt's HIBP API contest by Ryan Delaney.
 
 The purpose of this utility is to provide a way for developers, sysadmins, and the like to easily allow end-users to be made aware if they are creating or setting a password that has a high likelyhood for compromise in a credential stuffing attack (see https://www.owasp.org/index.php/Credential_stuffing).
 
